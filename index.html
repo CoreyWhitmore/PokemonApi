@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <title>Pokedex</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">Pokedex</span>
+            </a>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <div class="row h-100">
+            <div class="col-3 bg-info pokemon">
+                <h1>All Pokemon</h1>
+                <ul id="api-pokemon">
+                    <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                </ul>
+            </div>
+            <div class="col-6 pokemon">
+                <div class="row">
+                    <div class="col text-center">
+                        <h1>Active Pokemon</h1>
+                        <div id="active-pokemon"></div>
+                    </div>
+                </div>
+                <div class="row" id="active-pokemon"></div>
+            </div>
+            <div class="col-3 bg-info pokemon">
+                <h1>My Pokedex</h1>
+                <ul id="my-pokemon"></ul>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-center">
+            <div class="col">
+                <p><small>Made by Corey at Codeworks</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+        crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
